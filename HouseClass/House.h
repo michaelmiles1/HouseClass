@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#import "Bedroom.h"
 
 @interface House : NSObject
 
@@ -17,8 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) int numberOfBedrooms;
 @property (nonatomic) BOOL hasHotTub;
 
--(instancetype)initWithAddress: (NSString*)address;
+@property (nonatomic) Bedroom *frontBedroom;
+@property (nonatomic) Bedroom *backBedroom;
 
 @end
-
-NS_ASSUME_NONNULL_END
