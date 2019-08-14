@@ -13,9 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface House : NSObject
 
 // USE * WHEN YOU NEED POINTERS, LIKE IN STRINGS
-@property (nonatomic) NSString *address;
-@property (nonatomic) int numberOfBedrooms;
+@property (nonatomic, copy) NSString *address;
+@property (nonatomic, readonly) int numberOfBedrooms;
 @property (nonatomic) BOOL hasHotTub;
+
+-(instancetype)initWithAddress: (NSString*)address;
 
 @end
 
